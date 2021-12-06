@@ -9,10 +9,7 @@
   },
   "author": "Ruslan Lekhman <lekhman112@gmail.com> (https://github.com/lekhmanrus)",
   "contributors": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lekhmanrus/ngx-pug-builders"
-  },
+  "repository": "git://github.com/lekhmanrus/ngx-pug-builders.git",
   "license": "MIT",
   "readme": "https://github.com/lekhmanrus/ngx-pug-builders/blob/master/README.md",
   "main": "dist/index.js",

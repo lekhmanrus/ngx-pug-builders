@@ -2,8 +2,8 @@
 
 [![Build](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/build.yml/badge.svg)](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/build.yml)
 [![Publish](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/npm-publish.yml)
-[![npm version](https://img.shields.io/npm/v/lekhmanrus/ngx-pug-builders.svg)](https://www.npmjs.com/package/lekhmanrus/ngx-pug-builders)
-[![npm](https://img.shields.io/npm/dm/lekhmanrus/ngx-pug-builders.svg)](https://www.npmjs.com/package/lekhmanrus/ngx-pug-builders)
+[![npm version](https://img.shields.io/npm/v/ngx-pug-builders.svg)](https://www.npmjs.com/package/ngx-pug-builders)
+[![npm](https://img.shields.io/npm/dm/ngx-pug-builders.svg)](https://www.npmjs.com/package/ngx-pug-builders)
 
 Angular Pug Builders adds [pug](https://pugjs.org/) support for your Angular project.
 
@@ -17,9 +17,9 @@ Installation is simple as:
 
 1. At the root of your project, run:
 
-```sh
-ng add ngx-pug-builders
-```
+    ```sh
+    ng add ngx-pug-builders
+    ```
 
 
 2. That's it!
@@ -39,15 +39,15 @@ If you prefer manual installation, you would need:
 
 2. Install `ngx-pug-builders` and `pug` as a development dependencies:
 
-```sh
-npm install --save-dev ngx-pug-builders pug
-```
+    ```sh
+    npm install --save-dev ngx-pug-builders pug
+    ```
 
-or
+    or
 
-```sh
-npm i -D ngx-pug-builders pug
-```
+    ```sh
+    npm i -D ngx-pug-builders pug
+    ```
 
 
 3. Switch `@angular-devkit/build-angular` builders to appropriate `ngx-pug-builders` builders in your `angular.json`.
