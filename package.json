@@ -52,7 +52,9 @@
     "pug",
     "jade",
     "builder",
-    "schematics"
+    "builders",
+    "schematics",
+    "template"
   ],
   "dependencies": {
     "apply-loader": ">=2.0.0",
