@@ -1,6 +1,9 @@
 # Angular Pug Builders
 
-[![npm version](https://img.shields.io/npm/v/lekhmanrus/ngx-pug-builders.svg) ![npm](https://img.shields.io/npm/dm/lekhmanrus/ngx-pug-builders.svg)](https://www.npmjs.com/package/lekhmanrus/ngx-pug-builders)
+[![Build](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/build.yml/badge.svg)](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/build.yml)
+[![Publish](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/lekhmanrus/ngx-pug-builders/actions/workflows/npm-publish.yml)
+[![npm version](https://img.shields.io/npm/v/lekhmanrus/ngx-pug-builders.svg)](https://www.npmjs.com/package/lekhmanrus/ngx-pug-builders)
+[![npm](https://img.shields.io/npm/dm/lekhmanrus/ngx-pug-builders.svg)](https://www.npmjs.com/package/lekhmanrus/ngx-pug-builders)
 
 Angular Pug Builders adds [pug](https://pugjs.org/) support for your Angular project.
 
@@ -18,6 +21,7 @@ Installation is simple as:
 ng add ngx-pug-builders
 ```
 
+
 2. That's it!
 
 
@@ -32,6 +36,7 @@ If you prefer manual installation, you would need:
     * `@angular/compiler-cli`
     * `typescript`
 
+
 2. Install `ngx-pug-builders` and `pug` as a development dependencies:
 
 ```sh
@@ -43,6 +48,7 @@ or
 ```sh
 npm i -D ngx-pug-builders pug
 ```
+
 
 3. Switch `@angular-devkit/build-angular` builders to appropriate `ngx-pug-builders` builders in your `angular.json`.
 
@@ -100,7 +106,9 @@ export class AppComponent {
 ## Versioning
 
 Versions started from **v12** and are consistant with major Angular version used in your project. E.g.:
+
 Use `v13.x.x` with Angular `13.x.x`.
+
 Use `v12.x.x` with Angular `12.x.x`.
 
 
