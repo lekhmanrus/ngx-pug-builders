@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v12.0.0-beta.0...v12.0.0) (2021-12-06)
+
+
+### Features
+
+* log output ([6efbe3a](https://github.com/lekhmanrus/ngx-pug-builders/commit/6efbe3ac2c2e427d9023ff1dda49dfc9b2661018))
+
 ## [12.0.0-beta.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v12.0.0-alpha.2...v12.0.0-beta.0) (2021-12-06)
 
 
