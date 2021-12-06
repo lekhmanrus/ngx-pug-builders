@@ -1,0 +1,101 @@
+{
+  "name": "ngx-pug-builders",
+  "description": "Angular Pug Builders",
+  "version": "12.0.0-alpha.0",
+  "homepage": "https://lekhmanrus.github.io/ngx-pug-builders/",
+  "bugs": {
+    "url": "https://github.com/lekhmanrus/ngx-pug-builders/issues",
+    "email": "lekhman112@gmail.com"
+  },
+  "author": "Ruslan Lekhman <lekhman112@gmail.com> (https://github.com/lekhmanrus)",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lekhmanrus/ngx-pug-builders"
+  },
+  "license": "MIT",
+  "readme": "https://github.com/lekhmanrus/ngx-pug-builders/blob/master/README.md",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "builders.json"
+  ],
+  "builders": "builders.json",
+  "schematics": "./dist/schematics/collection.json",
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "prebuild": "shx rm -rf ./dist",
+    "build": "npm-run-all --parallel build:lib build:schematics",
+    "build:lib": "tsc",
+    "postbuild:lib": "npm run copy:lib:schemes",
+    "copy:lib:schemes": "npm-run-all --parallel copy:lib:schemes:browser copy:lib:schemes:dev-server copy:lib:schemes:extract-i18n copy:lib:schemes:karma copy:lib:schemes:server",
+    "copy:lib:schemes:browser": "shx cp ./node_modules/@angular-devkit/build-angular/src/browser/schema.json ./dist/browser",
+    "copy:lib:schemes:dev-server": "shx cp ./node_modules/@angular-devkit/build-angular/src/dev-server/schema.json ./dist/dev-server",
+    "copy:lib:schemes:extract-i18n": "shx cp ./node_modules/@angular-devkit/build-angular/src/extract-i18n/schema.json ./dist/extract-i18n",
+    "copy:lib:schemes:karma": "shx cp ./node_modules/@angular-devkit/build-angular/src/karma/schema.json ./dist/karma",
+    "copy:lib:schemes:server": "shx cp ./node_modules/@angular-devkit/build-angular/src/server/schema.json ./dist/server",
+    "build:schematics": "tsc -p tsconfig.schematics.json",
+    "postbuild:schematics": "npm-run-all --parallel fix:schematics:dist copy:schematics:collection",
+    "fix:schematics:dist": "npm run move:schematics:dist && npm run clean:schematics:dist",
+    "move:schematics:dist": "shx mv ./dist/schematics/src/schematics/ng-add ./dist/schematics/ng-add",
+    "clean:schematics:dist": "shx rm -rf ./dist/schematics/src",
+    "copy:schematics:collection": "shx cp ./src/schematics/collection.json ./dist/schematics/collection.json",
+    "release": "standard-version",
+    "commitlint": "commitlint",
+    "lint": "eslint ."
+  },
+  "private": false,
+  "keywords": [
+    "angular",
+    "ngx",
+    "ng",
+    "pug",
+    "jade",
+    "builder",
+    "schematics"
+  ],
+  "dependencies": {
+    "apply-loader": ">=2.0.0",
+    "ora": "5.4.1",
+    "simple-pug-loader": ">=0.2.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/architect": ">=0.1200.0 <0.1300.0",
+    "@angular-devkit/build-angular": "^12.0.0",
+    "@angular-devkit/core": "^12.0.0",
+    "@angular-devkit/schematics": "^12.0.0",
+    "@angular/compiler": "^12.0.0",
+    "@angular/compiler-cli": "^12.0.0",
+    "@commitlint/cli": ">=15.0.0",
+    "@commitlint/config-conventional": ">=15.0.0",
+    "@commitlint/format": ">=15.0.0",
+    "@schematics/angular": "^12.0.0",
+    "@types/node": ">=16.11.11",
+    "@typescript-eslint/eslint-plugin": ">=5.5.1-alpha.2",
+    "@typescript-eslint/parser": ">=5.5.1-alpha.2",
+    "eslint": ">=8.4.0",
+    "eslint-import-resolver-typescript": ">=2.5.0",
+    "eslint-plugin-import": ">=2.25.3",
+    "eslint-plugin-prefer-arrow": ">=1.2.3",
+    "eslint-plugin-unicorn": ">=39.0.0",
+    "husky": "^7.0.4",
+    "karma": ">=6.3.9",
+    "npm-run-all": "^4.1.5",
+    "pug": "^3.0.2",
+    "shx": "^0.3.3",
+    "standard-version": ">=9.3.2",
+    "ts-node": ">=10.4.0",
+    "typescript": ">=4.2.3 <4.4.0",
+    "webpack": "^5.65.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "peerDependencies": {
+    "@angular-devkit/build-angular": "^12.0.0",
+    "@angular/compiler-cli": "^12.0.0",
+    "pug": "^3.0.2",
+    "typescript": ">=4.2.3 <4.4.0"
+  }
+}

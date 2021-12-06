@@ -1,0 +1,5 @@
+{
+  "extends": [ "@commitlint/config-conventional" ],
+  "parserPreset": "conventional-changelog-angular",
+  "formatter": "@commitlint/format"
+}

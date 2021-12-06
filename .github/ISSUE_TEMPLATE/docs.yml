@@ -1,0 +1,13 @@
+name: Documentation
+description: Suggest an improvement to our documentation
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Documentation Feedback
+      description: |
+        Provide a brief summary of what you would like to see changed in our documentation.
+        Feel free to provide any suggestions of content or examples you’d like us to include.
+    validations:
+      required: true

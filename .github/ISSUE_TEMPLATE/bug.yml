@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report a bug in Angular Pug Builders
+labels: ["bug"]
+---
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      value: |
+        Steps to reproduce:
+        1.
+        2.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What behavior were you expecting to see?
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What behavior did you actually see?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: You can use `ng version` command.
+      value: |
+        - ngx-pug-builders:
+        - Angular:
+        - Angular CLI:
+        - Node.js:
+        - Operating System:
+    validations:
+      required: true

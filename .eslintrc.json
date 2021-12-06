@@ -1,0 +1,125 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "settings": {
+        "import/parsers": {
+          "@typescript-eslint/parser": [ ".ts" ]
+        },
+        "import/resolver": {
+          "typescript": {
+            "alwaysTryTypes": true,
+            "project": "."
+          }
+        }
+      },
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "tsconfig.schematics.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint",
+        "import",
+        "prefer-arrow",
+        "unicorn"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:import/errors"
+      ],
+      "rules": {
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array-simple"
+          }
+        ],
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "variable",
+            "types": [ "boolean" ],
+            "format": [ "PascalCase" ],
+            "prefix": [ "is", "should", "has", "can", "did", "will" ]
+          },
+          {
+            "selector": "enumMember",
+            "format": [ "PascalCase" ]
+          }
+        ],
+        "prefer-arrow/prefer-arrow-functions": [
+          "warn",
+          {
+            "disallowPrototype": true,
+            "singleReturnOnly": false,
+            "classPropertiesAllowed": false
+          }
+        ],
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/promise-function-async": "error",
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
+          }
+        ],
+        "brace-style": [
+          "error",
+          "1tbs"
+        ],
+        "comma-dangle": "error",
+        "import/order": "off",
+        "max-classes-per-file": [
+          "error",
+          1
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 100
+          }
+        ],
+        "no-redeclare": "error",
+        "no-underscore-dangle": "off",
+        "quote-props": [ "error", "consistent-as-needed" ],
+        "no-duplicate-imports": "error",
+        "no-irregular-whitespace": "error",
+        "no-multiple-empty-lines": [
+          "error",
+          {
+            "max": 2
+          }
+        ],
+        "prefer-template": "error",
+        "unicorn/filename-case": "error",
+        "sonarjs/no-duplicate-string": "off",
+        "import/no-deprecated": "off"
+      }
+    }
+  ]
+}
