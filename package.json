@@ -14,7 +14,7 @@
   "readme": "https://github.com/lekhmanrus/ngx-pug-builders/blob/master/README.md",
   "main": "dist/index.js",
   "files": [
-    "dist",
+    "dist/**",
     "builders.json"
   ],
   "builders": "builders.json",
