@@ -21,6 +21,14 @@ Installation is simple as:
     ng add ngx-pug-builders
     ```
 
+    **Note:** If you use older version of Angular, you need to install appropriate version of Angular Pug Builders. See [Versioning](#versioning).
+
+    **Example:** For Angular `v12.x.x` use
+
+      ```sh
+      ng add ngx-pug-builders@12
+      ```
+
 
 2. That's it!
 
