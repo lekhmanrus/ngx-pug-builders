@@ -5,7 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/ngx-pug-builders.svg)](https://www.npmjs.com/package/ngx-pug-builders)
 [![npm](https://img.shields.io/npm/dm/ngx-pug-builders.svg)](https://www.npmjs.com/package/ngx-pug-builders)
 
-Angular Pug Builders adds [pug](https://pugjs.org/) support for your Angular project.
+Angular Pug Builders adds [pug](https://pugjs.org/) (`.pug` / `.jade` files) support for your Angular project.
 
 It extends default [@angular-devkit/build-angular](https://github.com/angular/angular-cli/tree/master/packages/angular_devkit/build_angular) builders with webpack pug rules. That means you always could you the latest (or a specific version) Angular native builders with Angular Pug Builders, because Angular Pug Builders uses `@angular-devkit/build-angular` builders as a dependency.
 
