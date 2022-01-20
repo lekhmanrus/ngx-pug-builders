@@ -1,4 +1,6 @@
 import { ExecutionTransformer } from '@angular-devkit/build-angular/src/transforms';
+import { cosmiconfig } from 'cosmiconfig';
+import { dirname, resolve } from 'path';
 import * as webpack from 'webpack';
 import { merge } from 'webpack-merge';
 
@@ -10,16 +12,32 @@ export function isPromise<T>(promise: any): promise is Promise<T> {
 export const transformConfig = (config?: ExecutionTransformer<webpack.Configuration>) => {
   const oldConfig = config || ((input) => input) as ExecutionTransformer<webpack.Configuration>;
 
-  return ((input: webpack.Configuration) => {
+  return (async (input: webpack.Configuration) => {
     const oldResult = oldConfig(input);
     if (isPromise<webpack.Configuration>(oldResult)) {
-      return oldResult.then((result) => addPugRules(result))
+      const result = await oldResult;
+      return addPugRules(result);
     }
     return addPugRules(oldResult);
   }) as ExecutionTransformer<webpack.Configuration>;
 }
 
-export const addPugRules = (config: webpack.Configuration) => {
+export const addPugRules = async (config: webpack.Configuration) => {
+  const explorer = cosmiconfig('pug');
+  const result = await explorer.search();
+  let pugOptions: any;
+  if (result && result.config && !result.isEmpty) {
+    pugOptions = result.config;
+    const configDirPath = dirname(result.filepath);
+    if (configDirPath) {
+      if (pugOptions.root) {
+        pugOptions.root = resolve(configDirPath, pugOptions.root);
+      }
+      if (pugOptions.basedir) {
+        pugOptions.basedir = resolve(configDirPath, pugOptions.basedir);
+      }
+    }
+  }
   return merge(config, {
     module: {
       rules: [
@@ -27,7 +45,7 @@ export const addPugRules = (config: webpack.Configuration) => {
           test: /\.(pug|jade)$/,
           use: [
             { loader: 'apply-loader' },
-            { loader: 'simple-pug-loader' }
+            { loader: 'simple-pug-loader', ...(pugOptions ? { options: pugOptions } : { }) }
           ]
         }
       ]

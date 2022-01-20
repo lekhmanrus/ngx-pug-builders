@@ -89,6 +89,58 @@ export class AppComponent {
 ```
 
 
+### Options
+
+You can configure your project to pass the additional options to Pug loader.
+
+You can see the [supported options here](https://github.com/Spence-S/simple-pug-loader#options).
+
+### Configuration File Formats
+Angular Pug Builders supports configuration files in several formats:
+
+* **JavaScript** - use `.pugrc.js` or `pug.config.js` and export an object containing your configuration.
+* **YAML** - use `.pugrc`, .`pugrc.yaml` or `.pugrc.yml` to define the configuration structure.
+* **JSON** - use `.pugrc.json` to define the configuration structure.
+* **package.json** - create an `pugConfig` property in your `package.json` file and define your configuration there.
+
+If there are multiple configuration files in the same directory, Angular Pug Builders will only use one. The priority order is as follows:
+
+1. `package.json`
+2. `.pugrc`
+3. `.pugrc.json`
+4. `.pugrc.yaml`
+5. `.pugrc.yml`
+6. `.pugrc.js`
+7. `.pugrc.cjs`
+8. `pug.config.js`
+9. `pug.config.cjs`
+
+### Using Configuration Files
+
+Here's an example configuration file that sets Pug loader `basedir` option (again, [see whole list of supported options here](https://github.com/Spence-S/simple-pug-loader#options)):
+* `.pugrc.json` (JSON)
+  ```json
+  {
+    "basedir": "/pug/"
+  }
+  ```
+
+* `.pugrc` (YAML)
+  ```yaml
+  # Unlike pug-loader, simple-pug-loader uses pug for all file resolution.
+  basedir: /pug/
+  ```
+
+* `pug.config.js` (JavaScript)
+  ```js
+  module.exports = {
+    // Unlike pug-loader, simple-pug-loader uses pug for all file resolution.
+    basedir: '/pug/'
+  };
+  ```
+
+**P.S.**: Either of that should work. No need to create all of them. [See Configuration File Formats](#configuration-file-formats).
+
 
 ## Builders
 
