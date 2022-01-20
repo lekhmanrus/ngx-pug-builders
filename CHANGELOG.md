@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.1.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v13.0.0...v13.1.0) (2022-01-20)
+
+
+### Features
+
+* pug loader options ([1788c04](https://github.com/lekhmanrus/ngx-pug-builders/commit/1788c04fdc2d3f75537772c7086b0ba30265695e)), closes [#1](https://github.com/lekhmanrus/ngx-pug-builders/issues/1)
+
 ## [13.0.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v13.0.0-rc.0...v13.0.0) (2021-12-07)
 
 ## [13.0.0-rc.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v12.0.0...v13.0.0-rc.0) (2021-12-07)
