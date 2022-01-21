@@ -121,21 +121,21 @@ Here's an example configuration file that sets Pug loader `basedir` option (agai
 * `.pugrc.json` (JSON)
   ```json
   {
-    "basedir": "/pug/"
+    "basedir": "./src/"
   }
   ```
 
 * `.pugrc` (YAML)
   ```yaml
   # Unlike pug-loader, simple-pug-loader uses pug for all file resolution.
-  basedir: /pug/
+  basedir: ./src/
   ```
 
 * `pug.config.js` (JavaScript)
   ```js
   module.exports = {
     // Unlike pug-loader, simple-pug-loader uses pug for all file resolution.
-    basedir: '/pug/'
+    basedir: './src/'
   };
   ```
 
