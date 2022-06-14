@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v13.1.0...v14.0.0) (2022-06-14)
+
+
+### Features
+
+* support angular 14 ([da888b7](https://github.com/lekhmanrus/ngx-pug-builders/commit/da888b7522f7ddd88dd1f72307475a85a7ec97e1)), closes [#4](https://github.com/lekhmanrus/ngx-pug-builders/issues/4)
+
 ## [13.1.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v13.0.0...v13.1.0) (2022-01-20)
 
 
