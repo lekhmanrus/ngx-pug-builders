@@ -10,14 +10,15 @@
       ],
       "settings": {
         "import/parsers": {
-          "@typescript-eslint/parser": [ ".ts" ]
+          "@typescript-eslint/parser": [ ".d.ts", ".ts" ]
         },
         "import/resolver": {
           "typescript": {
             "alwaysTryTypes": true,
             "project": "."
           }
-        }
+        },
+        "import/ignore": [ "webpack" ]
       },
       "parserOptions": {
         "project": [

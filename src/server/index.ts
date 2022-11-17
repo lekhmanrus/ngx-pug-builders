@@ -12,4 +12,4 @@ export const buildPugWebpackServer: typeof executeServerBuilder
     webpackConfiguration: transformConfig(transforms.webpackConfiguration as any) as any
   });
 
-export default createBuilder<ServerBuilderOptions & ServerBuilderOutput>(buildPugWebpackServer);
+export default createBuilder<ServerBuilderOptions, ServerBuilderOutput>(buildPugWebpackServer);

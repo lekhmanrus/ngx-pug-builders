@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "lib": [
-      "es2018",
+      "es2020",
       "dom"
     ],
     "esModuleInterop": true,
@@ -21,7 +21,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "target": "es6",
+    "target": "es2022",
     "types": [
       "node"
     ]

@@ -12,6 +12,6 @@ export const buildPugWebpackDevServer: typeof executeDevServerBuilder
     webpackConfiguration: transformConfig(transforms.webpackConfiguration as any) as any
   });
 
-export default createBuilder<DevServerBuilderOptions & DevServerBuilderOutput>(
+export default createBuilder<DevServerBuilderOptions, DevServerBuilderOutput>(
   buildPugWebpackDevServer
 );
