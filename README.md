@@ -167,6 +167,8 @@ Here's an example configuration file that sets Pug loader `basedir` option (agai
 
 Versions started from **v12** and are consistant with major Angular version used in your project. E.g.:
 
+Use `v15.x.x` with Angular `15.x.x`.
+
 Use `v14.x.x` with Angular `14.x.x`.
 
 Use `v13.x.x` with Angular `13.x.x`.
