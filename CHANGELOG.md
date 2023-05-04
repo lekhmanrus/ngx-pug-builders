@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v15.0.0...v16.0.0) (2023-05-04)
+
+
+### Features
+
+* support angular 16 ([86b14ac](https://github.com/lekhmanrus/ngx-pug-builders/commit/86b14acf4f4c0b92f1a4a4388162c90828e6048c)), closes [#8](https://github.com/lekhmanrus/ngx-pug-builders/issues/8)
+
 ## [15.0.0](https://github.com/lekhmanrus/ngx-pug-builders/compare/v14.0.0...v15.0.0) (2022-11-17)
 
 
