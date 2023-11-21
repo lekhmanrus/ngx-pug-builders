@@ -1,7 +1,7 @@
 {
   "name": "ngx-pug-builders",
   "description": "Angular Pug Builders",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "homepage": "https://github.com/lekhmanrus/ngx-pug-builders/",
   "bugs": {
     "url": "https://github.com/lekhmanrus/ngx-pug-builders/issues",
